@@ -1,11 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserController;
 use App\Http\Controllers\RoomController;
+use App\Http\Controllers\RoomTypeController;
 use App\Http\Controllers\ReservationController;
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\AdminAuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,22 +16,57 @@ use App\Http\Controllers\AdminAuthController;
 |
 */
 
-Route::resource('/backend/users', UserController::class);
+Route::get('/', function () {
+    return view('index');
+});
 
-Route::resource('/backend/rooms', RoomController::class);
+Route::get('/AboutUs', function () {
+    return view('about-us');
+});
 
-Route::resource('/backend/reservations', ReservationController::class);
+Route::get('/BlogDetails', function () {
+    return view('blog-details');
+});
 
-Route::resource('/backend/dashboard', DashboardController::class);
+Route::get('/Blog', function () {
+    return view('blog');
+});
 
-Route::get('/xmlReservation', [ReservationController::class,'displayXMLFile'])->name('xmlReservation');
-
-Route::get('/xsltReservation', [ReservationController::class,'displayDesignXML'])->name('xsltReservation');
-
-//Login
-Route::get('/adminlogin', [AdminAuthController::class, 'showLoginForm']);
-Route::get('/dashboard', [AdminAuthController::class, 'successlogin']);
-Route::post('/adminlogin', [AdminAuthController::class, 'login']);
-Route::post('/adminlogout', [AdminAuthController::class, 'logout']);
+Route::get('/Contact', function () {
+    return view('contact');
+});
 
 
+// --------------- Room Types ---------------
+
+Route::get('/Room', function () {
+    return RoomController::index();
+});
+
+Route::get('/RoomDetails/{id}', [RoomController::class, 'show']);
+
+Route::get('RoomType/display', [RoomController::class, 'displayRoomTypesAPI']);
+
+// --------------- Reservation ---------------
+
+Route::post('/Reservation', [ReservationController::class, 'store']);
+
+Route::get('/ReservationDetails', function () {
+    return ReservationController::index();
+});
+
+// --------------- Payment ---------------
+
+Route::get('/Payment/{id}', [ReservationController::class, 'show']);
+
+Route::post('/Checkout/{id}', [ReservationController::class, 'payment']);
+
+// --------------- XML ---------------
+
+Route::get('/xml-roomTypes', [RoomController::class, 'displayXMLFile'])->name('xml-roomTypes');
+
+Route::get('/RoomTypes', [RoomController::class, 'displayRoomTypes'])->name('RoomTypes');
+
+// Route::get('/xml-reservations', [ReservationController::class, 'displayXMLFile'])->name('xml-reservations');
+
+// Route::get('/reservationsReport', [ReservationController::class, 'displayReservationReport'])->name('reservationsReport');

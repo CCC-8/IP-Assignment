@@ -1,180 +1,128 @@
 @extends('App')
-@section('body') 
-<!-- Breadcrumb Section Begin -->
-<div class="breadcrumb-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="breadcrumb-text">
-                    <h2>Our Rooms</h2>
-                    <div class="bt-option">
-                        <a href="./home.html">Home</a>
-                        <span>Rooms</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Breadcrumb Section End -->
+@section('body')
 
-<!-- Room Details Section Begin -->
-<section class="room-details-section spad">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8">
-                <div class="room-details-item">
-                    <img src="/template/img/room/room-details.jpg" alt="">
-                    <div class="rd-text">
-                        <div class="rd-title">
-                            <h3>Premium King Room</h3>
-                            <div class="rdt-right">
-                                <div class="rating">
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star-half_alt"></i>
-                                </div>
-                                <a href="#">Booking Now</a>
-                            </div>
-                        </div>
-                        <h2>159$<span>/Pernight</span></h2>
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td class="r-o">Size:</td>
-                                    <td>30 ft</td>
-                                </tr>
-                                <tr>
-                                    <td class="r-o">Capacity:</td>
-                                    <td>Max persion 5</td>
-                                </tr>
-                                <tr>
-                                    <td class="r-o">Bed:</td>
-                                    <td>King Beds</td>
-                                </tr>
-                                <tr>
-                                    <td class="r-o">Services:</td>
-                                    <td>Wifi, Television, Bathroom,...</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <p class="f-para">Motorhome or Trailer that is the question for you. Here are some of the
-                            advantages and disadvantages of both, so you will be confident when purchasing an RV.
-                            When comparing Rvs, a motorhome or a travel trailer, should you buy a motorhome or fifth
-                            wheeler? The advantages and disadvantages of both are studied so that you can make your
-                            choice wisely when purchasing an RV. Possessing a motorhome or fifth wheel is an
-                            achievement of a lifetime. It can be similar to sojourning with your residence as you
-                            search the various sites of our great land, America.</p>
-                        <p>The two commonly known recreational vehicle classes are the motorized and towable.
-                            Towable rvs are the travel trailers and the fifth wheel. The rv travel trailer or fifth
-                            wheel has the attraction of getting towed by a pickup or a car, thus giving the
-                            adaptability of possessing transportation for you when you are parked at your campsite.
-                        </p>
-                    </div>
-                </div>
-                <div class="rd-reviews">
-                    <h4>Reviews</h4>
-                    <div class="review-item">
-                        <div class="ri-pic">
-                            <img src="/template/img/room/avatar/avatar-1.jpg" alt="">
-                        </div>
-                        <div class="ri-text">
-                            <span>27 Aug 2019</span>
-                            <div class="rating">
-                                <i class="icon_star"></i>
-                                <i class="icon_star"></i>
-                                <i class="icon_star"></i>
-                                <i class="icon_star"></i>
-                                <i class="icon_star-half_alt"></i>
-                            </div>
-                            <h5>Brandon Kelley</h5>
-                            <p>Neque porro qui squam est, qui dolorem ipsum quia dolor sit amet, consectetur,
-                                adipisci velit, sed quia non numquam eius modi tempora. incidunt ut labore et dolore
-                                magnam.</p>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self';">
+
+    <!-- Breadcrumb Section Begin -->
+    <div class="breadcrumb-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb-text">
+                        <h2>Our Rooms</h2>
+                        <div class="bt-option">
+                            <a href="./home.html">Home</a>
+                            <span>Rooms</span>
                         </div>
                     </div>
-                    <div class="review-item">
-                        <div class="ri-pic">
-                            <img src="/template/img/room/avatar/avatar-2.jpg" alt="">
-                        </div>
-                        <div class="ri-text">
-                            <span>27 Aug 2019</span>
-                            <div class="rating">
-                                <i class="icon_star"></i>
-                                <i class="icon_star"></i>
-                                <i class="icon_star"></i>
-                                <i class="icon_star"></i>
-                                <i class="icon_star-half_alt"></i>
-                            </div>
-                            <h5>Brandon Kelley</h5>
-                            <p>Neque porro qui squam est, qui dolorem ipsum quia dolor sit amet, consectetur,
-                                adipisci velit, sed quia non numquam eius modi tempora. incidunt ut labore et dolore
-                                magnam.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="review-add">
-                    <h4>Add Review</h4>
-                    <form action="#" class="ra-form">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <input type="text" placeholder="Name*">
-                            </div>
-                            <div class="col-lg-6">
-                                <input type="text" placeholder="Email*">
-                            </div>
-                            <div class="col-lg-12">
-                                <div>
-                                    <h5>You Rating:</h5>
-                                    <div class="rating">
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star-half_alt"></i>
-                                    </div>
-                                </div>
-                                <textarea placeholder="Your Review"></textarea>
-                                <button type="submit">Submit Now</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="room-booking">
-                    <h3>Your Reservation</h3>
-                    <form action="#">
-                        <div class="check-date">
-                            <label for="date-in">Check In:</label>
-                            <input type="text" class="date-input" id="date-in">
-                            <i class="icon_calendar"></i>
-                        </div>
-                        <div class="check-date">
-                            <label for="date-out">Check Out:</label>
-                            <input type="text" class="date-input" id="date-out">
-                            <i class="icon_calendar"></i>
-                        </div>
-                        <div class="select-option">
-                            <label for="guest">Guests:</label>
-                            <select id="guest">
-                                <option value="">3 Adults</option>
-                            </select>
-                        </div>
-                        <div class="select-option">
-                            <label for="room">Room:</label>
-                            <select id="room">
-                                <option value="">1 Room</option>
-                            </select>
-                        </div>
-                        <button type="submit">Check Availability</button>
-                    </form>
                 </div>
             </div>
         </div>
     </div>
-</section>
-<!-- Room Details Section End -->
+    <!-- Breadcrumb Section End -->
+
+    <!-- Room Details Section Begin -->
+    <section class="room-details-section spad">
+        <div class="container">
+            <div class="row">
+                {{-- Room Details Section Start --}}
+                <div class="col-lg-8">
+                    <div class="room-details-item">
+                        <img src={{ $room->image }} style="width: 100%" alt="">
+                        <div class="rd-text">
+                            <div class="rd-title">
+                                <h3>{{ $room->name }} Room</h3>
+                                {{-- <div class="rdt-right">
+                                    <a href="#">Book Now</a>
+                                </div> --}}
+                            </div>
+                            <h2>RM{{ $room->pricePerNight }}<span> / Pernight</span></h2>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td class="r-o">Capacity:</td>
+                                        <td>Max person {{ $room->roomCapacity }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="r-o">Amenities:</td>
+                                        <td>
+                                            @if ($room->hasJacuzzi == 1)
+                                                Jacuzzi: Yes<br>
+                                            @else
+                                                Jacuzzi: No<br>
+                                            @endif
+                                            @if ($room->hasBalcony == 1)
+                                                Balcony: Yes<br>
+                                            @else
+                                                Balcony: No<br>
+                                            @endif
+                                            @if ($room->hasSeaView == 1)
+                                                Sea View: Yes<br>
+                                            @else
+                                                Sea View: No<br>
+                                            @endif
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                {{-- Room Details Section End --}}
+
+                {{-- Booking Form Section Start --}}
+                <div class="col-lg-4">
+                    <div class="room-booking">
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+                        <h3>Your Reservation</h3>
+                        <form action="/Reservation" method="post">
+                            @csrf
+                            <div class="check-date">
+                                <label for="check-in-date">Check In:</label>
+                                <input type="date" class="date-input" id="check-in-date" name="check_in_date" required>
+                                {{-- <i class="icon_calendar"></i> --}}
+                            </div>
+                            <div class="check-date">
+                                <label for="check-out-date">Check Out:</label>
+                                <input type="date" class="date-input" id="check-out-date" name="check_out_date" required>
+                                {{-- <i class="icon_calendar"></i> --}}
+                            </div>
+                            <div class="check-date">
+                                <label for="num-of-guest">Guests:</label>
+                                <input type="number" id="num-of-guests" name="num_of_guests" required>
+                            </div>
+                            <div class="check-date">
+                                <label for="room-type">Room Type:</label>
+                                <input type="text" id="room-type" name="room_type" value="{{ $room->name }}" readonly>
+                            </div><br>
+                            <div>
+                                <label for="breakfast">Breakfast (RM20)</label>
+                                <input type="checkbox" id="breakfast" name="meal_plans[]" value="breakfast">
+                            </div>
+                            <div>
+                                <label for="lunch">Lunch (RM25)</label>
+                                <input type="checkbox" id="lunch" name="meal_plans[]" value="lunch">
+                            </div>
+                            <div>
+                                <label for="dinner">Dinner (RM30)</label>
+                                <input type="checkbox" id="dinner" name="meal_plans[]" value="dinner">
+                            </div>
+                            <button type="submit">Book Now</button>
+                        </form>
+                    </div>
+                </div>
+                {{-- Booking Form Section End --}}
+
+            </div>
+        </div>
+    </section>
+    <!-- Room Details Section End -->
 @endsection

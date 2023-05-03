@@ -1,4 +1,4 @@
-@extends('frontend/App')
+@extends('App')
 @section('body') 
 <!-- Hero Section Begin -->
 <section class="hero-section" style="background-color: black;">
