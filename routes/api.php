@@ -2,8 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\LoginController;
-
+use App\Models\Reservation;
+use App\Http\Controllers\ReservationController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -19,6 +19,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::get('reservations/{phoneNum}', [ReservationController::class, 'getUserReservation']);
 
-Route::get('/getUsers', [LoginController::class, 'handler']);
-//Route::get('users', 'App\Http\Controllers\LoginController@handler');

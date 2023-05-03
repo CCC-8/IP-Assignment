@@ -126,6 +126,11 @@ return [
         'emergency' => [
             'path' => storage_path('logs/laravel.log'),
         ],
+        'roomModify' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/room.log'),
+            'level' => env('LOG_LEVEL', 'info'),
+        ],
     ],
 
 ];

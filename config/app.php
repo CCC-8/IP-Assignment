@@ -70,7 +70,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'Asia/Kuala_Lumpur',
 
     /*
     |--------------------------------------------------------------------------
@@ -167,10 +167,13 @@ return [
         App\Providers\AuthServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        App\Providers\RouteServiceProvider::class,    
+        /*
+         * Custom Service Providers...
+         */
+        App\Providers\RepositoriesServiceProvider::class
         
-        App\Providers\RecaptchaServiceProvider::class,
-
+        
     ])->toArray(),
 
     /*
@@ -186,8 +189,6 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,
-        
-        'ReCaptcha' => ReCaptcha\ReCaptcha::class,
     ])->toArray(),
 
 ];
